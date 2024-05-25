@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export default function Home(){
   //add track links here
   const tracks = [
@@ -25,7 +24,9 @@ export default function Home(){
 
       <header className="fixed left-0 top-0 w-full justify-center border bg-gray-200 p-4 dark:bg-zinc-800/30 items-center" style={{zIndex: 1}}>
         <div className="flex flex-col items-center">
-          <img src="/logo.png" alt="logo" className="h-12 w-auto mb-4" />
+        <a href="#">
+            <img src="/logo.png" alt="logo" className="h-12 w-auto mb-4" />
+        </a>
           <nav>
             <ul className="flex space-x-4">
               <li><a href="https://open.spotify.com/artist/3eqjTLE0HfPfh78zjh6TqT" target="_blank">Spotify</a></li>
@@ -50,15 +51,12 @@ export default function Home(){
       </div>
 
       <div className='gallery grid px-4 lg:px-8 pt-8 mb-20'>
-        {bandPhotos.map((photo, index) => (
-          <div key={index} style={{width: '100%', height: '250px', background: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-            <img src={photo} alt={`Band Photo ${index + 1}`} style={{maxHeight: '100%', objectFit: 'contain'}}/>
-          </div>
-        ))}
-      </div>
-
-
-
+  {bandPhotos.map((photo, index) => (
+    <div key={index} style={{width: '100%', height: '250px', background: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+      <img className="zoom" src={photo} alt={`Band Photo ${index + 1}`} style={{maxHeight: '100%', objectFit: 'contain'}}/>
+    </div>
+  ))}
+</div>
         
     </main>
   )

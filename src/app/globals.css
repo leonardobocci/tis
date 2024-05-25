@@ -66,3 +66,23 @@ body {
     max-width: 100%;
   }
 }
+
+.tracks-container iframe {
+  height: 352px;
+}
+
+@media (max-width: 768px) {
+  .tracks-container iframe {
+      height: 152px;
+  }
+}
+
+@media (min-width: 768px) {
+  .zoom {
+    transition: transform .2s;
+  }
+
+  .zoom:hover {
+    transform: scale(1.2);
+  }
+}

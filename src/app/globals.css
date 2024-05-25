@@ -31,3 +31,38 @@ body {
     text-wrap: balance;
   }
 }
+
+.gallery.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+  padding-left: 1rem; /* 16px */
+  padding-right: 1rem; /* 16px */
+}
+
+@media (min-width: 1024px) {
+  .gallery.grid {
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 2rem; /* 32px */
+    padding-right: 2rem; /* 32px */
+  }
+}
+
+.tracks-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tracks-container > div {
+  min-width: 300px;
+  max-width: 300px;
+  margin: 5px;
+}
+
+@media (max-width: 600px) {
+  .tracks-container > div {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}

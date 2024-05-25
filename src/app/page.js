@@ -22,8 +22,8 @@ export default function Home(){
 
   return(
     <main className="mypage">
-      
-      <header className="fixed left-0 top-0 w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30 items-center" style={{zIndex: 1}}>
+
+      <header className="fixed left-0 top-0 w-full justify-center border bg-gray-200 p-4 dark:bg-zinc-800/30 items-center" style={{zIndex: 1}}>
         <div className="flex flex-col items-center">
           <img src="/logo.png" alt="logo" className="h-12 w-auto mb-4" />
           <nav>
@@ -36,20 +36,20 @@ export default function Home(){
         </div>
       </header>
 
-      <video className="relative top-0 left-0 w-full object-cover" style={{ height: 'calc(100vh - 50px)' }} autoPlay muted loop>
+      <video className="relative top-0 left-0 w-full object-cover" style={{ height: '100vh' }} autoPlay muted loop>
         <source src="/band_video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      <div className="tracks-container flex flex-row items-center justify-center mt-40">
+      <div className="tracks-container flex flex-row items-center justify-center mt-10">
           {tracks.map((track, index) => (
               <div key={index} style={{ marginBottom: '10px', marginRight: index !== tracks.length - 1 ? '10px' : '0px' }}>
-                  <iframe style={{borderRadius: '12px'}} src={track} width="100%" height="152" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                  <iframe style={{borderRadius: '12px'}} src={track} width="100%" height="352" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
               </div>
           ))}
       </div>
 
-      <div className='gallery grid px-4 lg:px-8 pt-8'>
+      <div className='gallery grid px-4 lg:px-8 pt-8 mb-20'>
         {bandPhotos.map((photo, index) => (
           <div key={index} style={{width: '100%', height: '250px', background: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             <img src={photo} alt={`Band Photo ${index + 1}`} style={{maxHeight: '100%', objectFit: 'contain'}}/>
@@ -57,6 +57,9 @@ export default function Home(){
         ))}
       </div>
 
+
+
+        
     </main>
   )
 }

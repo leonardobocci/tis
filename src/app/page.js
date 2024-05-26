@@ -70,7 +70,7 @@ export default function Home(){
       </div>
 
       <footer className="text-center p-4 bg-gray-200">
-        <p>Page built by Leo Bocci. Visit Leo's other projects at:  
+        <p>Page built by Leo Bocci. Visit Leo&apos;s other projects at:  
         <a href=" https://leobocci.pages.dev/" target="_blank" rel="noopener noreferrer" style={{color: 'blue'}}>https://leobocci.pages.dev/</a>
         </p>
       </footer>

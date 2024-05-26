@@ -26,6 +26,7 @@ export default function Home(){
   ];
 
   return(
+
     <main className="mypage">
 
       <header className="fixed left-0 top-0 w-full justify-center border bg-gray-200 p-4 items-center text-black" style={{zIndex: 1}}>
@@ -52,7 +53,7 @@ export default function Home(){
         {soundcloudTracks.map((track, index) => (
           <iframe 
           key={index}
-          src={`${track}&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=true&visual=true`}
+          src={`${track}&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true`}
           style={{borderRadius: '12px'}}
           loading="lazy"
         ></iframe>
@@ -66,6 +67,12 @@ export default function Home(){
           </div>
         ))}
       </div>
+
+      <footer className="text-center p-4 bg-gray-200">
+        <p>Page built by Leo Bocci. Visit Leo's other projects at:  
+        <a href=" https://leobocci.pages.dev/" target="_blank" rel="noopener noreferrer" style={{color: 'blue'}}>https://leobocci.pages.dev/</a>
+        </p>
+      </footer>
         
     </main>
   )

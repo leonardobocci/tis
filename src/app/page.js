@@ -10,7 +10,7 @@ export default function Home(){
   ];
 
   const bandPhotos = [
-    "https://static.printler.com/cache/3/1/b/8/4/5/31b845beca4c198e4718cb0126138f2415c7c491.jpg",
+    "band.jpeg",
     "https://i.ytimg.com/vi/eK_T2CpVJS0/maxresdefault.jpg",
     "https://d2cx26qpfwuhvu.cloudfront.net/millstad/wp-content/uploads/2023/10/30114553/BruceSpringsteen-cardiff-events-page-1170x660-1-737x416.jpg",
     "https://cdn-p.smehost.net/sites/e8622626f9584d40b1a8fce8dfa6f567/wp-content/uploads/2023/12/springsteen-bruce119.jpg",

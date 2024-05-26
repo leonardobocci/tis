@@ -19,10 +19,16 @@ export default function Home(){
     "https://i.ytimg.com/vi/eK_T2CpVJS0/maxresdefault.jpg",
   ];
 
+  const soundcloudTracks = [
+    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1830548916&color=%23312727",
+    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1830565767&color=%23312727",
+    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1830548916&color=%23312727",
+  ];
+
   return(
     <main className="mypage">
 
-      <header className="fixed left-0 top-0 w-full justify-center border bg-gray-200 p-4 dark:bg-zinc-800/30 items-center" style={{zIndex: 1}}>
+      <header className="fixed left-0 top-0 w-full justify-center border bg-gray-200 p-4 items-center text-black" style={{zIndex: 1}}>
         <div className="flex flex-col items-center">
         <a href="#">
             <img src="/logo.png" alt="logo" className="h-12 w-auto mb-4" />
@@ -37,26 +43,29 @@ export default function Home(){
         </div>
       </header>
 
-      <video className="relative top-0 left-0 w-full object-cover" style={{ height: '100vh' }} autoPlay muted loop>
+      <video className="relative top-0 left-0 w-full object-cover" style={{ height: '100vh' }} autoPlay muted loop playsInline>
         <source src="/band_video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      <div className="tracks-container flex flex-row items-center justify-center mt-10">
-          {tracks.map((track, index) => (
-              <div key={index} style={{ marginBottom: '10px', marginRight: index !== tracks.length - 1 ? '10px' : '0px' }}>
-                  <iframe style={{borderRadius: '12px'}} src={track} width="100%" height="352" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-              </div>
-          ))}
+      <div className="soundcloud-container flex flex-row items-center justify-center mt-10 mb-10">
+        {soundcloudTracks.map((track, index) => (
+          <iframe 
+          key={index}
+          src={`${track}&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=true&visual=true`}
+          style={{borderRadius: '12px'}}
+          loading="lazy"
+        ></iframe>
+        ))}
       </div>
 
       <div className='gallery grid px-4 lg:px-8 pt-8 mb-20'>
-  {bandPhotos.map((photo, index) => (
-    <div key={index} style={{width: '100%', height: '250px', background: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-      <img className="zoom" src={photo} alt={`Band Photo ${index + 1}`} style={{maxHeight: '100%', objectFit: 'contain'}}/>
-    </div>
-  ))}
-</div>
+        {bandPhotos.map((photo, index) => (
+          <div key={index} style={{width: '100%', height: '250px', background: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <img className="zoom" src={photo} alt={`Band Photo ${index + 1}`} style={{maxHeight: '100%', objectFit: 'contain'}}/>
+          </div>
+        ))}
+      </div>
         
     </main>
   )

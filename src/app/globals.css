@@ -48,32 +48,24 @@ body {
   }
 }
 
-.tracks-container {
+.soundcloud-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.tracks-container > div {
-  min-width: 300px;
+.soundcloud-container iframe {
+  width: 100%;
   max-width: 300px;
-  margin: 5px;
-}
-
-@media (max-width: 600px) {
-  .tracks-container > div {
-    min-width: 100%;
-    max-width: 100%;
-  }
-}
-
-.tracks-container iframe {
-  height: 352px;
+  height: 300px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  margin-left: 10px;
 }
 
 @media (max-width: 768px) {
-  .tracks-container iframe {
-      height: 152px;
+  .soundcloud-container iframe {
+      height: 150px;
   }
 }
 

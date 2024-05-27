@@ -1,5 +1,6 @@
 import React from 'react';
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Home(){
   //add track links here
@@ -21,14 +22,18 @@ export default function Home(){
   ];
 
   const soundcloudTracks = [
-    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1830548916&color=%23312727",
-    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1830565767&color=%23312727",
-    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1830548916&color=%23312727",
+    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1830548916&color=%23312727", //zabierz
+    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1830565767&color=%23312727", //wiosna
+    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1831486869&color=%23945c84", //kwiaty
+    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1831487556&color=%23945c84", //swiatlo
   ];
 
   return(
 
     <main className="mypage">
+      <SpeedInsights/>
+      <Analytics/>
+
 
       <header className="fixed left-0 top-0 w-full justify-center border bg-gray-200 p-4 items-center text-black" style={{zIndex: 1}}>
         <div className="flex flex-col items-center">

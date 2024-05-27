@@ -3,12 +3,6 @@ import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Home(){
-  //add track links here
-  const tracks = [
-    "https://open.spotify.com/embed/track/7FwBtcecmlpc1sLySPXeGE?utm_source=generator&theme=0",
-    "https://open.spotify.com/embed/track/68uuz61IqrSJjO6ffO3yHc?utm_source=generator",
-    "https://open.spotify.com/embed/track/6hTcuIQa0sxrrByu9wTD7s?utm_source=generator&theme=0",
-  ];
 
   const bandPhotos = [
     "band.jpeg",
@@ -22,10 +16,10 @@ export default function Home(){
   ];
 
   const soundcloudTracks = [
-    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1830548916&color=%23312727", //zabierz
-    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1830565767&color=%23312727", //wiosna
-    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1831486869&color=%23945c84", //kwiaty
     "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1831487556&color=%23945c84", //swiatlo
+    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1830548916&color=%23312727", //wiosna
+    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1831486869&color=%23945c84", //kwiaty
+    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1830565767&color=%23312727", //zabierz
   ];
 
   return(

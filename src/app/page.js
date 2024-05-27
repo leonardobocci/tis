@@ -5,14 +5,14 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 export default function Home(){
 
   const bandPhotos = [
+    "1.jpeg",
+    "2.jpeg",
+    "3.jpeg",
+    "4.jpeg",
     "band.jpeg",
-    "https://i.ytimg.com/vi/eK_T2CpVJS0/maxresdefault.jpg",
-    "https://d2cx26qpfwuhvu.cloudfront.net/millstad/wp-content/uploads/2023/10/30114553/BruceSpringsteen-cardiff-events-page-1170x660-1-737x416.jpg",
-    "https://cdn-p.smehost.net/sites/e8622626f9584d40b1a8fce8dfa6f567/wp-content/uploads/2023/12/springsteen-bruce119.jpg",
-    "https://i.ytimg.com/vi/eK_T2CpVJS0/maxresdefault.jpg",
-    "https://d2cx26qpfwuhvu.cloudfront.net/millstad/wp-content/uploads/2023/10/30114553/BruceSpringsteen-cardiff-events-page-1170x660-1-737x416.jpg",
-    "https://cdn-p.smehost.net/sites/e8622626f9584d40b1a8fce8dfa6f567/wp-content/uploads/2023/12/springsteen-bruce119.jpg",
-    "https://i.ytimg.com/vi/eK_T2CpVJS0/maxresdefault.jpg",
+    "2.jpeg",
+    "3.jpeg",
+    "4.jpeg",
   ];
 
   const soundcloudTracks = [

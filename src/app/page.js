@@ -23,57 +23,59 @@ export default function Home(){
   ];
 
   return(
+    <>
+      <head><meta name="google-site-verification" content="t43xkLCC61OtERDFeguMemYrbe9kyeBpUXm5ggPBPgQ" /></head>
+      <main className="mypage">
+        <SpeedInsights/>
+        <Analytics/>
 
-    <main className="mypage">
-      <SpeedInsights/>
-      <Analytics/>
 
-
-      <header className="fixed left-0 top-0 w-full justify-center border bg-gray-200 p-4 items-center text-black" style={{zIndex: 1}}>
-        <div className="flex flex-col items-center">
-        <a href="#">
-            <img src="/logo.png" alt="logo" className="h-12 w-auto mb-4" />
-        </a>
-          <nav>
-            <ul className="flex space-x-4">
-              <li><a href="https://open.spotify.com/artist/3eqjTLE0HfPfh78zjh6TqT" target="_blank">Spotify</a></li>
-              <li><a href="https://www.youtube.com/channel/UCcu7ANuD9J7hnTQCREqIc4Q" target="_blank">Youtube</a></li>
-              <li><a href="https://www.facebook.com/brucespringsteen/" target="_blank">Facebook</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-
-      <video className="relative top-0 left-0 w-full object-cover" style={{ height: '100vh' }} autoPlay muted loop playsInline>
-        <source src="/band_video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      <div className="soundcloud-container flex flex-row items-center justify-center mt-10 mb-10">
-        {soundcloudTracks.map((track, index) => (
-          <iframe 
-          key={index}
-          src={`${track}&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true`}
-          style={{borderRadius: '12px'}}
-          loading="lazy"
-        ></iframe>
-        ))}
-      </div>
-
-      <div className='gallery grid px-4 lg:px-8 pt-8 mb-20'>
-        {bandPhotos.map((photo, index) => (
-          <div key={index} style={{width: '100%', height: '250px', background: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-            <img className="zoom" src={photo} alt={`Band Photo ${index + 1}`} style={{maxHeight: '100%', objectFit: 'contain'}}/>
+        <header className="fixed left-0 top-0 w-full justify-center border bg-gray-200 p-4 items-center text-black" style={{zIndex: 1}}>
+          <div className="flex flex-col items-center">
+          <a href="#">
+              <img src="/logo.png" alt="logo" className="h-12 w-auto mb-4" />
+          </a>
+            <nav>
+              <ul className="flex space-x-4">
+                <li><a href="https://open.spotify.com/artist/3eqjTLE0HfPfh78zjh6TqT" target="_blank">Spotify</a></li>
+                <li><a href="https://www.youtube.com/channel/UCcu7ANuD9J7hnTQCREqIc4Q" target="_blank">Youtube</a></li>
+                <li><a href="https://www.facebook.com/brucespringsteen/" target="_blank">Facebook</a></li>
+              </ul>
+            </nav>
           </div>
-        ))}
-      </div>
+        </header>
 
-      <footer className="text-center p-4 bg-gray-200 text-black">
-        <p>Page built by Leo Bocci. Visit Leo&apos;s other projects at:  
-        <a href=" https://leobocci.pages.dev/" target="_blank" rel="noopener noreferrer" style={{color: 'blue'}}>https://leobocci.pages.dev/</a>
-        </p>
-      </footer>
-        
-    </main>
+        <video className="relative top-0 left-0 w-full object-cover" style={{ height: '100vh' }} autoPlay muted loop playsInline>
+          <source src="/band_video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <div className="soundcloud-container flex flex-row items-center justify-center mt-10 mb-10">
+          {soundcloudTracks.map((track, index) => (
+            <iframe 
+            key={index}
+            src={`${track}&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true`}
+            style={{borderRadius: '12px'}}
+            loading="lazy"
+          ></iframe>
+          ))}
+        </div>
+
+        <div className='gallery grid px-4 lg:px-8 pt-8 mb-20'>
+          {bandPhotos.map((photo, index) => (
+            <div key={index} style={{width: '100%', height: '250px', background: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+              <img className="zoom" src={photo} alt={`Band Photo ${index + 1}`} style={{maxHeight: '100%', objectFit: 'contain'}}/>
+            </div>
+          ))}
+        </div>
+
+        <footer className="text-center p-4 bg-gray-200 text-black">
+          <p>Page built by Leo Bocci. Visit Leo&apos;s other projects at:  
+          <a href=" https://leobocci.pages.dev/" target="_blank" rel="noopener noreferrer" style={{color: 'blue'}}>https://leobocci.pages.dev/</a>
+          </p>
+        </footer>
+          
+      </main>
+    </>
   )
 }

@@ -9,3 +9,11 @@ You can view the live site [here](https://incubus-syndrome.vercel.app/).
 ## Portfolio
 
 For more information about the creation of this site, or to view my other projects, please visit my [portfolio page](https://leobocci.pages.dev/).
+
+## Local deployment
+
+```
+cd <repo root>
+npm install
+npm run dev
+```

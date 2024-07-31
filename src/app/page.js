@@ -1,18 +1,18 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Home(){
 
   const bandPhotos = [
+    "horizontal_sepia.jpeg",
+    "tis_archive.jpg",
+    "tis_color.jpg",
+    "horizontal_grayscale.jpeg",
     "1.jpeg",
     "2.jpeg",
     "3.jpeg",
     "4.jpeg",
-    "5.jpeg",
-    "6.jpeg",
-    "7.jpeg",
-    "8.jpeg",
   ];
 
   const soundcloudTracks = [
@@ -23,7 +23,7 @@ export default function Home(){
   ];
 
   return(
-    <>
+    <Fragment>
       <head><meta name="google-site-verification" content="t43xkLCC61OtERDFeguMemYrbe9kyeBpUXm5ggPBPgQ" /></head>
       <main className="mypage">
         <SpeedInsights/>
@@ -33,13 +33,11 @@ export default function Home(){
         <header className="fixed left-0 top-0 w-full justify-center border bg-gray-200 p-4 items-center text-black" style={{zIndex: 1}}>
           <div className="flex flex-col items-center">
           <a href="#">
-              <img src="/logo.png" alt="logo" className="h-12 w-auto mb-4" />
+              <img src="/tis_header.jpg" alt="logo" className="h-12 w-auto mb-4" />
           </a>
             <nav>
               <ul className="flex space-x-4">
-                <li><a href="https://open.spotify.com/artist/3eqjTLE0HfPfh78zjh6TqT" target="_blank">Spotify</a></li>
-                <li><a href="https://www.youtube.com/channel/UCcu7ANuD9J7hnTQCREqIc4Q" target="_blank">Youtube</a></li>
-                <li><a href="https://www.facebook.com/brucespringsteen/" target="_blank">Facebook</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61562531923601" target="_blank">Facebook</a></li>
               </ul>
             </nav>
           </div>
@@ -76,6 +74,6 @@ export default function Home(){
         </footer>
           
       </main>
-    </>
+    </Fragment>
   )
 }
